@@ -150,10 +150,14 @@
           fetch(endpoint, {
             method: "POST",
             headers: { "content-type": "application/json"},
-            body: JSON.stringify({title: input1.value, author: input2.value})
+            body: JSON.stringify({
+              title: input1.value, 
+              author: input2.value})
           })
             .then(response => response.json)
             .then(data => {
+              console.log("test");
+              console.log(JSON.stringify(data));
               document.getElementById("output").textContent = JSON.stringify(data);
             })
         }
@@ -182,7 +186,10 @@
           fetch(url, {
             method: "PUT",
             headers: { "content-type": "application/json"},
-            body: JSON.stringify({title: input1.value, author: input2.value, id: input3.value})
+            body: JSON.stringify({
+              title: input1.value, 
+              author: input2.value, 
+              id: input3.value})
           })
             .then(response => response.json)
             .then(data => {
@@ -208,7 +215,10 @@
           method: "DELETE"
         })
           .then(response => response.text)
-          .catch()
+          .catch(function(error) {
+            console.log(error);
+            document.getElementById("output").innerText = error;
+          })
       }
 
       window.addEventListener('DOMContentLoaded', () => {
