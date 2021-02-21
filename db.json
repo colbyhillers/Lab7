@@ -1,26 +1,5 @@
 {
-  "posts": [
-    {
-      "title": "yeet",
-      "author": "colby",
-      "id": 1
-    },
-    {
-      "title": "dee",
-      "author": "colby4",
-      "id": 4
-    },
-    {
-      "title": "deee",
-      "author": "calv",
-      "id": 5
-    },
-    {
-      "title": "ds",
-      "author": "sd",
-      "id": 6
-    }
-  ],
+  "posts": [],
   "comments": [],
   "profile": {
     "name": "typicode"
